@@ -1,0 +1,20 @@
+<script src="scripts/jquery.js"></script>
+
+<script>
+$(function() {
+	$('input').on('change', function() {
+		var val = $(this).val();
+		var disp = $('div');
+
+		var regex = /([a-z0-9\s]+)/i;
+
+		if (val.match(regex)) {
+			disp.text('best');
+		} else {
+			disp.text('weak');
+		}
+	});
+});
+</script>
+
+<input type="text" /><div></div>
